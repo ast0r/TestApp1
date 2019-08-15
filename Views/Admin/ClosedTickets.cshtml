@@ -1,0 +1,84 @@
+﻿@model IEnumerable<TestApp1.Models.TicketModel>
+
+@{
+    ViewBag.Title = "Closed Tickets";
+}
+
+<h2>Closed Tickets</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Department.DepartmentTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TicketStatus.StatusTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Subject)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TicketText)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GUIDLink)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OwnerID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Answer)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Department.DepartmentTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TicketStatus.StatusTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Subject)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TicketText)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Time)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GUIDLink)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OwnerID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Answer)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TicketId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.TicketId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.TicketId })
+        </td>
+    </tr>
+}
+
+</table>

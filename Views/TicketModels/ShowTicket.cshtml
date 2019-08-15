@@ -1,0 +1,98 @@
+﻿@model TestApp1.Models.TicketModel
+
+@{
+    ViewBag.Title = "ShowTicket";
+}
+
+<h2>Show Ticket</h2>
+
+<div>
+    <h4>TicketModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Department.DepartmentTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Department.DepartmentTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TicketStatus.StatusTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TicketStatus.StatusTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Subject)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Subject)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TicketText)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TicketText)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Time)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Time)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OwnerID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OwnerID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GUIDLink)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GUIDLink)
+        </dd>
+
+    </dl>
+</div>
+@*<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TicketId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>*@
