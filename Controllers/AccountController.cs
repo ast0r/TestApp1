@@ -79,7 +79,8 @@ namespace TestApp1.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
-                    return RedirectToLocal(returnUrl);
+                    //return RedirectToLocal(returnUrl);
+                    return RedirectToAction("NewUnassignedTickets", "Admin");
                 case SignInStatus.LockedOut:
                     return View("Lockout");
                 case SignInStatus.RequiresVerification:

@@ -38,8 +38,10 @@ namespace TestApp1.Controllers
         public ActionResult ClosedTickets()
         {
             var closedTickets = db.Tickets.Where(t => t.StatusId == 4);
-              var tmp = db.Tickets.Where(t=> t.StatusId == 5);
+            var tmp = db.Tickets.Where(t=> t.StatusId == 5);
+
             closedTickets = closedTickets.Concat(tmp);
+
             return View(closedTickets.ToList());
         }
 
