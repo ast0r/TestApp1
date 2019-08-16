@@ -45,6 +45,7 @@ namespace TestApp1.Models
         public string GUIDLink { get; set; }
         public int? StatusId { get; set; }
         public virtual TicketStatus TicketStatus { get; set; }
+
         [Display(Name = "Owner")]
         public string OwnerID { get; set; }        
 
