@@ -10,6 +10,8 @@ namespace TestApp1.Models
     {
         [Key]
         public int DepartmentId { get; set; }
+
+        [Display(Name = "Department")]
         public string DepartmentTitle { get; set; }
     }
 }

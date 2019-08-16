@@ -24,7 +24,7 @@ namespace TestApp1.Models
         public string Email { get; set; }
 
 
-        [Display(Name = "Department")]
+        
         public int? DepartmentId { get; set; }
         public virtual Department Department { get; set; }
 
@@ -35,6 +35,7 @@ namespace TestApp1.Models
 
         [Required]
         [MaxLength(100)]
+        [Display(Name = "Text")]
         public string TicketText { get; set; }
 
 
